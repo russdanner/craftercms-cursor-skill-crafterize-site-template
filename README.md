@@ -32,7 +32,10 @@ Crafterizing transforms a static template into a structured CrafterCMS site by:
 1. In Crafter Studio, create a new project in CrafterCMS using the Empty Blueprint
 
 In CursorAI:
-2. open the sandbox folder for the new project
+2. open the sandbox folder for the new project4
+
 3. Add a folder called `html-template`
+
 4. Add all of the html files and assets from the template to the `html-template` folder
+
 5. Open chat and invoke the skill by entering "Crafterize this html template"
