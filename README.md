@@ -1,0 +1,1 @@
+# craftercms-cursor-skill-crafterize-site-template
