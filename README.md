@@ -25,7 +25,8 @@ Crafterizing transforms a static template into a structured CrafterCMS site by:
 1. Open Cursor Preferences
 2. Navigate to Rules and Commands
 3. Add a User Rule
-4. Paste the skill markdown into the rule input area
+4. Paste the skill markdown into the rule input area 
+(https://raw.githubusercontent.com/russdanner/craftercms-cursor-skill-crafterize-site-template/refs/heads/main/crafterize-html-template-skill.md)
 5. Save the preferences
 
 ## Use
