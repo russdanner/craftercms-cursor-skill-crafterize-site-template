@@ -18,7 +18,36 @@ Crafterizing transforms a static template into a structured CrafterCMS site by:
 - Converting HTML into **FreeMarker templates (FTL)** while preserving the DOM structure exactly
 - Adding **Experience Builder (XB)** markup so authors can edit content inline
 - Wiring pages to sections via `sections_o` references (ordered component lists)
+- Generate Markdown documentation for the site and content model
+  ```
+  ## `/component/header`
 
+  **Template**: `/templates/web/components/header.ftl`  
+  **Content Path**: `/site/components/headers/`  
+  **Description**: Site header with branding, contact info, social links, and navigation
+
+  #### Key Fields
+
+  | Name | Type | Description | Required | Notes |
+  |------|------|-------------|----------|-------|
+  | siteName_t | input | Site name/logo text | true | XB editable (iceId=branding), maxlength=100 |
+  | logo_s | image-picker | Logo image (optional) | false | XB editable (iceId=branding) |
+  | email_t | input | Contact email | false | XB editable (iceId=contact), maxlength=100 |
+  | phone_t | input | Contact phone | false | XB editable (iceId=contact), maxlength=50 |
+  | socialLinks_o | repeat | Social media links | false | XB editable (iceId=social), minOccurs=0, maxOccurs=* |
+  | navItems_o | repeat | Navigation menu items | false | XB editable (iceId=navigation), supports nested dropdowns |
+
+  #### Nested Fields (socialLinks_o)
+  - `platform_t` (input): Platform name (twitter, facebook, etc.), required
+  - `url_s` (input): Social media URL, required
+
+  #### Nested Fields (navItems_o)
+  - `label_t` (input): Menu item label, required
+  - `url_s` (input): Menu item URL, required
+  - `hasDropdown_b` (checkbox): Whether item has dropdown
+  - `dropdownItems_o` (repeat): Nested dropdown items (supports multi-level)
+  ```
+  
 ---
 
 ## Installation
