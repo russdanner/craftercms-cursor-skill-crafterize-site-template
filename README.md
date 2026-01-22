@@ -92,4 +92,4 @@ https://craftercms.com/docs/current/reference/modules/studio.html#preview-token
    ```
    Double check that your XB modifications do not break CSS styles, if they do, modify the CSS to correct the style.
    ```
-4. Remember to ask cursor to generate documentation for the site. This often helps it be consistent as it leverages content types.
+4. Remember to ask cursor to generate documentation for the site. This often helps Cursor be consistent as it leverages content types.
