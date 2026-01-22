@@ -30,6 +30,8 @@ Crafterizing transforms a static template into a structured CrafterCMS site by:
 5. Save the preferences
 
 ## Use
+
+### Running the Crafterization skill
 1. In Crafter Studio, create a new project in CrafterCMS using the Empty Blueprint
 
 In CursorAI:
@@ -41,3 +43,24 @@ In CursorAI:
 4. Add all of the html files and assets from the template to the `html-template` folder
 
 5. Open chat and invoke the skill by entering "Crafterize this html template"
+
+### Using Preview to test and improve results
+You can ask Cursor to check templates and content for correctness and errors using preview with the following type of prompt:
+```
+Use a curl command like the following to check that the markup of the new site matches the original template exactly and that there are no errors:
+curl --header "cookie: crafterPreview=CCE-V1#U8ruoKOScYQ3+taIlLgis9XmJ1a3CMJAflG+gWFeV7evDAeQXRCbkgLeAFsLBxn4;" "http://localhost:8080/?crafterSite=clinic"
+
+Use curl to review every page you created. Fix issues and errors found in each response. Report back all of the corrections
+```
+
+Crafter Studio's Preview requires a Preview token in order to access it externally from Studio. You can follow these instructions to generate a preview token for your site:
+https://craftercms.com/docs/current/reference/modules/studio.html#preview-token
+
+## Other tips
+1. Cursor will generally run for 10 to 20 minutes before stopping for you to check its work (assuming all commands it wants to execute are allowed.)  Large sites may not complete in this time. In this case, we've found it may be best to ask it to focus on certain page types or sections in each iteration.
+2. Give Cursor the ability to use Cursor to check its work. See above for help.
+3. Sometimes XB tags interfere with the CSS styles. You can ask Cursor to correct the template or CSS as needed to ensure the design is preserved with a prompt similar to:
+   ```
+   Double check that your XB modifications do not break CSS styles, if they do, modify the CSS to correct the style.
+   ```
+4. Remember to ask cursor to generate documentation for the site. This often helps it be consistent as it leverages content types.
