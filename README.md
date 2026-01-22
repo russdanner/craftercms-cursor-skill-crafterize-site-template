@@ -81,7 +81,7 @@ In CursorAI:
 You can ask Cursor to check templates and content for correctness and errors using preview with the following type of prompt:
 ```
 Use a curl command like the following to check that the markup of the new site matches the original template exactly and that there are no errors:
-curl --header "cookie: crafterPreview=CCE-V1#U8ruoKOScYQ3+taIlLgis9XmJ1a3CMJAflG+gWFeV7evDAeQXRCbkgLeAFsLBxn4;" "http://localhost:8080/?crafterSite=clinic"
+curl --header "cookie: crafterPreview=[Preview Token];" "http://localhost:8080/?crafterSite=clinic"
 
 Use curl to review every page you created. Fix issues and errors found in each response. Report back all of the corrections
 ```
