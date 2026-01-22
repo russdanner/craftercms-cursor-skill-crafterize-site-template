@@ -95,6 +95,9 @@ http://localhost:8080/?crafterSite=[SITE_ID]&crafterPreview=[URL_ENCODED_PREVIEW
 
 ## Other tips
 1. Cursor will generally run for 10 to 20 minutes before stopping for you to check its work (assuming all commands it wants to execute are allowed.)  Large sites may not complete in this time. In this case, we've found it may be best to ask it to focus on certain page types or sections in each iteration.
+```
+Can you check the departments page to make sure it is complete and correct any missing or broken elements.
+```
 2. Give Cursor the ability to use Cursor to check its work. See above for help.
 3. Sometimes XB tags interfere with the CSS styles. You can ask Cursor to correct the template or CSS as needed to ensure the design is preserved with a prompt similar to:
    ```
