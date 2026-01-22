@@ -1,7 +1,11 @@
 # CursorAI HTML Template to CrafterCMS Project Conversion Skill
 This repository contains a **Cursor skill/rule** for converting (“**crafterizing**”) a static HTML website template into a fully functional, authorable **CrafterCMS** project.
-
 It is designed to produce **pixel-perfect parity** with the original HTML while moving all author-editable content into Crafter content items and enabling **Experience Builder (XB)** in-context editing.
+
+## Demo
+https://www.youtube.com/watch?v=9pdY-nCkyls
+
+<img width="720px" alt="image" src="https://github.com/user-attachments/assets/58a80cd0-d1a1-4625-b434-3c15fe73d5b6" />
 
 ---
 
@@ -73,7 +77,7 @@ In CursorAI:
 
 5. Open chat and invoke the skill by entering "Crafterize this html template"
 
-### Using Preview to test and improve results
+### Using Preview to enable Cursor to test and fix issues
 You can ask Cursor to check templates and content for correctness and errors using preview with the following type of prompt:
 ```
 Use a curl command like the following to check that the markup of the new site matches the original template exactly and that there are no errors:
@@ -84,6 +88,10 @@ Use curl to review every page you created. Fix issues and errors found in each r
 
 Crafter Studio's Preview requires a Preview token in order to access it externally from Studio. You can follow these instructions to generate a preview token for your site:
 https://craftercms.com/docs/current/reference/modules/studio.html#preview-token
+
+### Open Browser preview for the site in Cursor
+It's entirely optional, but you can open a Cursor browser for the site and directing Cursor to your preview server with the following URL:
+http://localhost:8080/?crafterSite=clinic&crafterPreview=[URL Encoded Preview Token]
 
 ## Other tips
 1. Cursor will generally run for 10 to 20 minutes before stopping for you to check its work (assuming all commands it wants to execute are allowed.)  Large sites may not complete in this time. In this case, we've found it may be best to ask it to focus on certain page types or sections in each iteration.
