@@ -81,7 +81,7 @@ In CursorAI:
 You can ask Cursor to check templates and content for correctness and errors using preview with the following type of prompt:
 ```
 Use a curl command like the following to check that the markup of the new site matches the original template exactly and that there are no errors:
-curl --header "cookie: crafterPreview=[Preview Token];" "http://localhost:8080/?crafterSite=clinic"
+curl --header "cookie: crafterPreview=[PREVIEW_TOKEN];" "http://localhost:8080/?crafterSite=[SITE_ID]"
 
 Use curl to review every page you created. Fix issues and errors found in each response. Report back all of the corrections
 ```
@@ -91,7 +91,7 @@ https://craftercms.com/docs/current/reference/modules/studio.html#preview-token
 
 ### Open Browser preview for the site in Cursor
 It's entirely optional, but you can open a Cursor browser for the site and directing Cursor to your preview server with the following URL:
-http://localhost:8080/?crafterSite=clinic&crafterPreview=[URL Encoded Preview Token]
+http://localhost:8080/?crafterSite=[SITE_ID]&crafterPreview=[URL_ENCODED_PREVIEW_TOKEN]
 
 ## Other tips
 1. Cursor will generally run for 10 to 20 minutes before stopping for you to check its work (assuming all commands it wants to execute are allowed.)  Large sites may not complete in this time. In this case, we've found it may be best to ask it to focus on certain page types or sections in each iteration.
