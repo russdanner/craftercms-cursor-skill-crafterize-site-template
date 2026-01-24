@@ -3768,9 +3768,8 @@ Example:
 32. **XB Macro Limitations**: Don't use `@crafter.img` with hyphenated attributes (data-*, aria-*), use regular HTML `<img>` tags instead
 33. **Template Testing**: Test ALL templates with curl immediately after creation to catch errors early, don't wait until browser testing
 34. **Content Completeness**: Verify content sections have FULL HTML content from original template, not just snippets
-35. **Sitemap Implementation**: Use `siteItemService.getSiteItem()` for direct file access to known page paths if Elasticsearch queries are unreliable
-36. **Template Structure**: Compare rendered output with original HTML line-by-line, preserve all wrapper elements, test visually against original template
-37. **XB Markup Testing**: Test XB editing for every field immediately after adding markup, verify all fields are editable
-38. **OpenSearch Indexing**: Test indexing by committing changes and checking logs, fix any `mapper_parsing_exception` errors immediately
-39. **Component Template Failures**: For problematic nested components, use direct template inclusion instead of `@renderComponent` if template retrieval fails
-40. **Field Definition Sync**: Never add fields to content items without updating the form definition first
+35. **Template Structure**: Compare rendered output with original HTML line-by-line, preserve all wrapper elements, test visually against original template
+36. **XB Markup Testing**: Test XB editing for every field immediately after adding markup, verify all fields are editable
+37. **OpenSearch Indexing**: Test indexing by committing changes and checking logs, fix any `mapper_parsing_exception` errors immediately
+38. **Component Template Failures**: For problematic nested components, use direct template inclusion instead of `@renderComponent` if template retrieval fails
+39. **Field Definition Sync**: Never add fields to content items without updating the form definition first
