@@ -1,4 +1,4 @@
-# CursorAI HTML Template to CrafterCMS Project Conversion Skill
+# AI Skills for CrafterCMS Developers
 This repository contains a **Cursor skill/rule** for converting (“**crafterizing**”) a static HTML website template into a fully functional, authorable **CrafterCMS** project.
 It is designed to produce **pixel-perfect parity** with the original HTML while moving all author-editable content into Crafter content items and enabling **Experience Builder (XB)** in-context editing.
 
